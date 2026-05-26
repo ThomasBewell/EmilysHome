@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Image Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background: #008080;
+      color: #000000;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .page {
+      width: 760px;
+      margin: 20px auto;
+      background: #c0c0c0;
+      border: 4px ridge #ffffff;
+      padding: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffff00;
+      background: #000080;
+      border: 3px outset #ffffff;
+      padding: 10px;
+      margin-top: 0;
+      font-size: 36px;
+      text-shadow: 2px 2px #000000;
+    }
+
+    .marquee-box {
+      background: #000000;
+      color: #00ff00;
+      border: 2px inset #ffffff;
+      padding: 6px;
+      margin-bottom: 16px;
+      font-family: "Courier New", monospace;
+    }
+
+    .intro {
+      background: #ffffff;
+      border: 2px inset #808080;
+      padding: 10px;
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .gallery {
+      display: table;
+      width: 100%;
+      border-spacing: 12px;
+    }
+
+    .row {
+      display: table-row;
+    }
+
+    .item {
+      display: table-cell;
+      width: 50%;
+      vertical-align: top;
+      background: #ffffff;
+      border: 3px outset #dddddd;
+      padding: 8px;
+    }
+
+    .item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border: 2px solid #000000;
+      background: #eeeeee;
+    }
+
+    .item h2 {
+      font-size: 22px;
+      color: #800080;
+      margin: 8px 0 4px;
+      text-decoration: underline;
+    }
+
+    .item p {
+      font-size: 16px;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 2px dashed #000000;
+      font-size: 14px;
+    }
+
+    .counter {
+      display: inline-block;
+      background: #000000;
+      color: #00ff00;
+      padding: 4px 8px;
+      font-family: "Courier New", monospace;
+      border: 2px inset #ffffff;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    a:visited {
+      color: #551a8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Welcome to My Image Gallery</h1>
+
+    <div class="marquee-box">
+      <marquee behavior="scroll" direction="left">New pictures added weekly!!! Best viewed in Netscape Navigator at 800x600.</marquee>
+    </div>
+
+    <div class="intro">
+      <p>
+        This is a small collection of images, memories, and strange little fragments from around the web.
+        Each picture has a short note underneath it. Replace the image files and text with your own.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="row">
+        <div class="item">
+          <img src="images/photo1.jpg" alt="Description of image one" />
+          <h2>Image One</h2>
+          <p>
+            A faded snapshot from an ordinary afternoon. The colors are washed out, but the scene still feels oddly important.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="images/photo2.jpg" alt="Description of image two" />
+          <h2>Image Two</h2>
+          <p>
+            This image looks like it was found in an old folder with no explanation. The mystery is part of the appeal.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="item">
+          <img src="images/photo3.jpg" alt="Description of image three" />
+          <h2>Image Three</h2>
+          <p>
+            A quiet scene with too much empty space. It feels like something has just happened, or is about to happen.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="images/photo4.jpg" alt="Description of image four" />
+          <h2>Image Four</h2>
+          <p>
+            The kind of picture that makes you wonder who took it, why they saved it, and why it ended up here.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="item">
+          <img src="images/photo5.jpg" alt="Description of image five" />
+          <h2>Image Five</h2>
+          <p>
+            A blurry record of a place that might not exist anymore. The low quality makes it feel more real, not less.
+          </p>
+        </div>
+
+        <div class="item">
+          <img src="images/photo6.jpg" alt="Description of image six" />
+          <h2>Image Six</h2>
+          <p>
+            This one has the mood of a memory recovered from an old hard drive, compressed and renamed too many times.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href="#">Home</a> | <a href="#">Guestbook</a> | <a href="#">Links</a> | <a href="mailto:you@example.com">Email Me</a></p>
+      <p>You are visitor number: <span class="counter">000823</span></p>
+      <p>Last updated: June 12, 1998</p>
+    </div>
+  </div>
+</body>
+</html>
