@@ -7,64 +7,111 @@
   <style>
     body {
       margin: 0;
-      background: #008080;
-      color: #000000;
+      background: #232123;
+      color: #c8c4c6;
       font-family: "Times New Roman", Times, serif;
+      background-image: repeating-linear-gradient(
+        45deg,
+        #232123,
+        #232123 6px,
+        #2b282a 6px,
+        #2b282a 12px
+      );
     }
 
     .page {
       width: 900px;
-      margin: 20px auto;
-      background: #c0c0c0;
-      border: 4px ridge #ffffff;
-      padding: 12px;
+      margin: 24px auto;
+      background: #7e777c;
+      padding: 14px;
+      border-top: 4px solid #c8c0c5;
+      border-left: 4px solid #c8c0c5;
+      border-right: 4px solid #3d383b;
+      border-bottom: 4px solid #3d383b;
+      box-shadow:
+        8px 8px 0px #171517,
+        12px 12px 22px rgba(0, 0, 0, 0.65);
     }
 
     h1 {
       text-align: center;
-      color: #ffff00;
-      background: #000080;
-      border: 3px outset #ffffff;
+      color: #ece7ea;
+      background: linear-gradient(to right, #4f484d, #686066);
+      border-top: 3px solid #d4cbd1;
+      border-left: 3px solid #d4cbd1;
+      border-right: 3px solid #322d31;
+      border-bottom: 3px solid #322d31;
       padding: 12px;
       margin-top: 0;
       font-size: 42px;
+      letter-spacing: 4px;
       text-shadow: 2px 2px #000000;
     }
 
     .intro {
-      background: #ffffff;
-      border: 2px inset #808080;
-      color: #000000;
-      padding: 10px;
+      background: #989096;
+      border-top: 3px solid #484246;
+      border-left: 3px solid #484246;
+      border-right: 3px solid #ddd5db;
+      border-bottom: 3px solid #ddd5db;
+      color: #1a1719;
+      padding: 12px;
       margin-bottom: 18px;
       font-size: 18px;
+      box-shadow: inset 2px 2px 5px #5f585d;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      gap: 14px;
     }
 
     .item {
-      background: #ffffff;
-      border: 3px outset #dddddd;
+      background: #aaa2a8;
+      border-top: 3px solid #e6dde3;
+      border-left: 3px solid #e6dde3;
+      border-right: 3px solid #504a4e;
+      border-bottom: 3px solid #504a4e;
       padding: 8px;
-      color: #000000;
+      color: #111111;
+      box-shadow: 4px 4px 0px #504a4e;
     }
 
     .item img {
       width: 100%;
       height: 150px;
       object-fit: cover;
-      border: 2px solid #000000;
-      background: #eeeeee;
+      background: #1b1b1b;
+      border-top: 2px solid #51484f;
+      border-left: 2px solid #51484f;
+      border-right: 2px solid #cfc4cc;
+      border-bottom: 2px solid #cfc4cc;
+      filter: grayscale(35%) contrast(85%) brightness(82%);
+    }
+
+    .item:nth-child(3n) img {
+      transform: rotate(-1deg);
+    }
+
+    .item:nth-child(4n) img {
+      transform: rotate(1deg);
+    }
+
+    .item:nth-child(7n) img {
+      transform: rotate(-0.5deg);
     }
 
     .item h2 {
       font-size: 20px;
-      color: #800080;
-      margin: 8px 0 4px;
+      color: #4b3947;
+      background: #c1b6bd;
+      margin: 8px 0 5px;
+      padding: 3px 5px;
+      border-top: 2px solid #eee5eb;
+      border-left: 2px solid #eee5eb;
+      border-right: 2px solid #6e626a;
+      border-bottom: 2px solid #6e626a;
       text-decoration: underline;
     }
 
@@ -72,173 +119,199 @@
       font-size: 15px;
       line-height: 1.35;
       margin: 0;
-      color: #000000;
+      color: #181518;
+      background: #9d959b;
+      padding: 5px;
+      border-top: 2px solid #5c555a;
+      border-left: 2px solid #5c555a;
+      border-right: 2px solid #d8cfd5;
+      border-bottom: 2px solid #d8cfd5;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #4a4548;
+      text-align: center;
+      font-style: italic;
     }
 
     .footer {
       text-align: center;
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 2px dashed #000000;
+      margin-top: 24px;
+      padding: 10px;
+      background: #989096;
+      border-top: 3px solid #484246;
+      border-left: 3px solid #484246;
+      border-right: 3px solid #ddd5db;
+      border-bottom: 3px solid #ddd5db;
       font-size: 14px;
-      color: #000000;
+      color: #171416;
     }
 
     .counter {
       display: inline-block;
       background: #000000;
-      color: #00ff00;
+      color: #b9e6bc;
       padding: 4px 8px;
       font-family: "Courier New", monospace;
-      border: 2px inset #ffffff;
+      border-top: 2px solid #3f383d;
+      border-left: 2px solid #3f383d;
+      border-right: 2px solid #d0c5cc;
+      border-bottom: 2px solid #d0c5cc;
     }
 
     a {
-      color: #0000ee;
+      color: #594257;
+      font-weight: bold;
     }
 
     a:visited {
-      color: #551a8b;
+      color: #403247;
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <h1>Emily's Home</h1>
+    <h1>EMILY'S HOME</h1>
 
     <div class="intro">
       <p>
-        Welcome to Emily's Home, a small collection of images, memories, and strange little fragments.
-        Each picture has a short note underneath it. Replace the image files and text with your own.
+        Welcome to Emily's Home. These are some pictures from school, family trips, birthdays, and other days I wanted to remember.
+        Some of the scans are old, so a few of them may look strange.
       </p>
     </div>
 
     <div class="gallery">
       <div class="item">
-        <img src="images/photo1.jpg" alt="Photo 1" />
-        <h2>Photo 1</h2>
-        <p>Description of image 1.</p>
+        <img src="images/photo1.jpg" alt="Summer 1998" />
+        <h2>Summer 1998</h2>
+        <p>We stayed outside until it was almost dark.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo2.jpg" alt="Photo 2" />
-        <h2>Photo 2</h2>
-        <p>Description of image 2.</p>
+        <img src="images/photo2.jpg" alt="Field Trip" />
+        <h2>Field Trip</h2>
+        <p>Everyone was supposed to stand together for this one.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo3.jpg" alt="Photo 3" />
-        <h2>Photo 3</h2>
-        <p>Description of image 3.</p>
+        <img src="images/photo3.jpg" alt="Backyard" />
+        <h2>Backyard</h2>
+        <p>The fence looked different before it was repaired.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo4.jpg" alt="Photo 4" />
-        <h2>Photo 4</h2>
-        <p>Description of image 4.</p>
+        <img src="images/photo4.jpg" alt="Birthday Party" />
+        <h2>Birthday Party</h2>
+        <p>I do not remember who took this picture.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo5.jpg" alt="Photo 5" />
-        <h2>Photo 5</h2>
-        <p>Description of image 5.</p>
+        <img src="images/photo5.jpg" alt="After School" />
+        <h2>After School</h2>
+        <p>This was near the old parking lot behind the gym.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo6.jpg" alt="Photo 6" />
-        <h2>Photo 6</h2>
-        <p>Description of image 6.</p>
+        <img src="images/photo6.jpg" alt="Living Room" />
+        <h2>Living Room</h2>
+        <p>The television was always on in the background.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo7.jpg" alt="Photo 7" />
-        <h2>Photo 7</h2>
-        <p>Description of image 7.</p>
+        <img src="images/photo7.jpg" alt="Lake Weekend" />
+        <h2>Lake Weekend</h2>
+        <p>There were more pictures from this day, but not anymore.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo8.jpg" alt="Photo 8" />
-        <h2>Photo 8</h2>
-        <p>Description of image 8.</p>
+        <img src="images/photo8.jpg" alt="School Dance" />
+        <h2>School Dance</h2>
+        <p>The flash made everyone look pale.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo9.jpg" alt="Photo 9" />
-        <h2>Photo 9</h2>
-        <p>Description of image 9.</p>
+        <img src="images/photo9.jpg" alt="Guest Room" />
+        <h2>Guest Room</h2>
+        <p>This room was usually kept closed.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo10.jpg" alt="Photo 10" />
-        <h2>Photo 10</h2>
-        <p>Description of image 10.</p>
+        <img src="images/photo10.jpg" alt="Driveway" />
+        <h2>Driveway</h2>
+        <p>Mom said this was the last picture on the roll.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo11.jpg" alt="Photo 11" />
-        <h2>Photo 11</h2>
-        <p>Description of image 11.</p>
+        <img src="images/photo11.jpg" alt="Hallway" />
+        <h2>Hallway</h2>
+        <p>The light at the end never came out right.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo12.jpg" alt="Photo 12" />
-        <h2>Photo 12</h2>
-        <p>Description of image 12.</p>
+        <img src="images/photo12.jpg" alt="Class Picnic" />
+        <h2>Class Picnic</h2>
+        <p>Most of the names are written on the back.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo13.jpg" alt="Photo 13" />
-        <h2>Photo 13</h2>
-        <p>Description of image 13.</p>
+        <img src="images/photo13.jpg" alt="Basement" />
+        <h2>Basement</h2>
+        <p>I found this one in a different envelope.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo14.jpg" alt="Photo 14" />
-        <h2>Photo 14</h2>
-        <p>Description of image 14.</p>
+        <img src="images/photo14.jpg" alt="Vacation" />
+        <h2>Vacation</h2>
+        <p>The date printed on the corner is wrong.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo15.jpg" alt="Photo 15" />
-        <h2>Photo 15</h2>
-        <p>Description of image 15.</p>
+        <img src="images/photo15.jpg" alt="Front Steps" />
+        <h2>Front Steps</h2>
+        <p>Someone was standing just outside the frame.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo16.jpg" alt="Photo 16" />
-        <h2>Photo 16</h2>
-        <p>Description of image 16.</p>
+        <img src="images/photo16.jpg" alt="Sleepover" />
+        <h2>Sleepover</h2>
+        <p>We tried to stay awake until morning.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo17.jpg" alt="Photo 17" />
-        <h2>Photo 17</h2>
-        <p>Description of image 17.</p>
+        <img src="images/photo17.jpg" alt="The Woods" />
+        <h2>The Woods</h2>
+        <p>This was farther back than we were supposed to go.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo18.jpg" alt="Photo 18" />
-        <h2>Photo 18</h2>
-        <p>Description of image 18.</p>
+        <img src="images/photo18.jpg" alt="Kitchen Table" />
+        <h2>Kitchen Table</h2>
+        <p>The chairs were never arranged like this.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo19.jpg" alt="Photo 19" />
-        <h2>Photo 19</h2>
-        <p>Description of image 19.</p>
+        <img src="images/photo19.jpg" alt="Last Day" />
+        <h2>Last Day</h2>
+        <p>I kept this one because everyone was smiling.</p>
       </div>
 
       <div class="item">
-        <img src="images/photo20.jpg" alt="Photo 20" />
-        <h2>Photo 20</h2>
-        <p>Description of image 20.</p>
+        <img src="images/photo20.jpg" alt="Untitled" />
+        <h2>Untitled</h2>
+        <p>This file was already named photo20 when I found it.</p>
       </div>
+    </div>
+
+    <div class="note">
+      Some of these pictures were scanned from old prints.
     </div>
 
     <div class="footer">
       <p><a href="#">Home</a> | <a href="#">Gallery</a> | <a href="#">Guestbook</a> | <a href="mailto:you@example.com">Email Me</a></p>
       <p>You are visitor number: <span class="counter">000823</span></p>
-      <p>Last updated: June 12, 1998</p>
+      <p>Last updated: November 17, 1999</p>
     </div>
   </div>
 </body>
